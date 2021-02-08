@@ -1,0 +1,253 @@
+*{
+  margin: 0;
+}
+
+html,body,#root,.app{
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h4{
+  font-size: 14px;
+  margin: 0;
+}
+
+.faded-text{
+  color: #797D82;
+}
+
+
+/* NAVIGATION BAR */
+.navbar{
+   background-color: #0246BE;
+   color: #ffffff;
+   padding: 0px 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  color: #ffffff;
+}
+
+/* CONTENTS */
+.content{
+  height: calc(100% - 40px);
+  padding: 0 20px;
+  display: flow-root;
+
+  & .container{
+    margin-top: 20px;
+    padding-top: 10px;
+
+    & h3{
+      margin: 0;
+    }
+
+    & .shipping-info{
+      padding-top: 10px;
+
+      & div{
+        display: inline-block;
+        width: 30%;
+        max-width: 85px;
+        text-align: center;
+
+        & hr{
+          border: 2px solid #dcdfe3;
+        }
+
+        &.active{
+          & hr{
+            border: 2px solid #2175C8;
+          }
+          & span{
+            color: #000;
+            font-weight: bold;
+          }
+        }            
+      }
+      & img{
+        width: 33%;
+      }
+
+      & .shipped{
+        margin-left: 5px;
+      }
+      & .delivered{
+        margin-left: 5px;
+      }
+    }
+  
+
+    & .order{
+      display: inline-block;
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 10px;
+
+      & .order-image{
+        width: 170px;
+        height: 200px;
+        display: inline-block;
+        padding: 10px 25px;
+        vertical-align: bottom;
+        cursor: pointer;
+      }
+      & .info{
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+
+        & .shipping-info{
+
+          & div{
+            width: 30%;
+            max-width: 85px;           
+          }
+          & img{
+            width: 33%;
+          }
+        }
+
+        & .product-info{
+          & .product-name{
+            font-weight: bold;
+          }
+          & .product-details{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    &.order-details{
+
+      & .shipping-info{
+        margin-bottom: 30px;
+        margin-top: 15px;
+  
+        & div{
+          width: 30%;
+          max-width: 170px;         
+        }
+        & img{
+          width: 33%;
+        }
+      }
+    }
+
+    & .alert{
+      padding-left: 30px;
+      & .alert-text{
+        & img{
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+
+    & .shipping-dates{
+
+      & h4{
+        font-size: 16px;
+      }
+
+      & .original-shipment{
+        margin-top: 5px;
+      }
+    }
+
+    & .carrier-info, .delivery-info{
+      margin-top: 15px;
+    }
+
+    & .address-info{
+      position: relative;
+      margin-top: 5px;
+
+      & h4{
+        position: absolute;
+        top: 4px;
+      }
+
+      & div{
+        padding-left: 60px;
+      }
+    }
+
+    & .action-buttons{
+      margin-top: 20px;
+      & .btn-custom{
+        border: 2px solid #606468;
+        color: #606468;
+        margin-left: 10px;
+      }
+    }
+
+    & .items-info{
+      margin-top: 35px;
+      padding: 0;
+      & .order-image{
+        padding: 0;
+        width: 120px;
+        height: 150px;
+      }
+
+      & .info{
+        & h3{
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    
+  }
+}
+
+
+/* RESPONSIVE CODE */
+@media (max-width:450px){
+  .content{
+    & .container{
+
+      & .product-info{
+        font-size: 14px;
+      }
+
+      & .action-buttons{
+        & .btn{
+          width: 100%;
+        }
+        & .btn-custom{
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+
+      & .items-info{
+        & .order-image{
+          width: 30%;
+          height: auto;
+        }
+  
+        & .info{
+          & h3{
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}
